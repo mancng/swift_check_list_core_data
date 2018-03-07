@@ -31,39 +31,52 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to supermarket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m33-dk-FPd">
                                             <rect key="frame" x="24" y="19" width="200" height="29"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="34B-EZ-Sms"/>
                                                 <constraint firstAttribute="height" constant="29" id="ZgC-d9-FbD"/>
-                                                <constraint firstAttribute="width" constant="200" id="zI5-SZ-TNI"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-6G-EY1">
-                                            <rect key="frame" x="232" y="19" width="100" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I need to buy vegetables, chips, pasta, soda, milk, bread and salmon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-HK-lod">
-                                            <rect key="frame" x="24" y="56" width="308" height="69"/>
+                                            <rect key="frame" x="24" y="56" width="226" height="69"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" constant="226" id="gji-1W-m9o"/>
                                                 <constraint firstAttribute="height" constant="69" id="xNU-Eo-GQJ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/12/2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-6G-EY1">
+                                            <rect key="frame" x="232" y="19" width="111" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="111" id="chx-WC-hY5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmx-QG-Hnl">
+                                            <rect key="frame" x="296" y="75" width="49" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="31" id="eoG-LJ-ar6"/>
+                                                <constraint firstAttribute="width" constant="47" id="ubP-Yw-pcm"/>
+                                            </constraints>
+                                        </switch>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="RvP-6G-EY1" firstAttribute="trailing" secondItem="ZRw-HK-lod" secondAttribute="trailing" id="38E-4L-XGm"/>
                                         <constraint firstItem="ZRw-HK-lod" firstAttribute="leading" secondItem="m33-dk-FPd" secondAttribute="leading" id="3QF-Or-nQt"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ZRw-HK-lod" secondAttribute="trailing" constant="27" id="5GF-f5-g2y"/>
                                         <constraint firstItem="RvP-6G-EY1" firstAttribute="baseline" secondItem="m33-dk-FPd" secondAttribute="baseline" id="8O3-mU-xys"/>
                                         <constraint firstItem="RvP-6G-EY1" firstAttribute="firstBaseline" secondItem="m33-dk-FPd" secondAttribute="firstBaseline" id="AEZ-2h-g1Z"/>
                                         <constraint firstItem="ZRw-HK-lod" firstAttribute="top" secondItem="m33-dk-FPd" secondAttribute="bottom" constant="8" symbolic="YES" id="NmX-XN-sbZ"/>
-                                        <constraint firstItem="RvP-6G-EY1" firstAttribute="leading" secondItem="m33-dk-FPd" secondAttribute="trailing" constant="8" symbolic="YES" id="geN-oD-2ua"/>
+                                        <constraint firstItem="xmx-QG-Hnl" firstAttribute="top" secondItem="RvP-6G-EY1" secondAttribute="bottom" constant="27" id="Wyo-W9-3u0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xmx-QG-Hnl" secondAttribute="bottom" constant="19" id="fig-b2-rFJ"/>
+                                        <constraint firstItem="RvP-6G-EY1" firstAttribute="leading" secondItem="m33-dk-FPd" secondAttribute="trailing" constant="8" id="geN-oD-2ua"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RvP-6G-EY1" secondAttribute="trailing" constant="16" id="hCM-BO-RHz"/>
                                         <constraint firstItem="ZRw-HK-lod" firstAttribute="bottom" secondItem="t9R-lx-RqX" secondAttribute="bottomMargin" id="jRd-LL-dCn"/>
                                         <constraint firstItem="m33-dk-FPd" firstAttribute="top" secondItem="t9R-lx-RqX" secondAttribute="topMargin" constant="8" id="sM1-lQ-dMD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xmx-QG-Hnl" secondAttribute="trailing" constant="16" id="uph-8x-RWR"/>
                                         <constraint firstItem="m33-dk-FPd" firstAttribute="leading" secondItem="t9R-lx-RqX" secondAttribute="leadingMargin" constant="8" id="xB4-mv-Fl8"/>
                                     </constraints>
                                 </tableViewCellContentView>

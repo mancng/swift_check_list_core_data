@@ -53,6 +53,7 @@
 		A837186E20166D3100673FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A837187A20166D9D00673FE9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A837187C20166E2800673FE9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A8C44B3E2016A21000EDAA74 /* check_list2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = check_list2.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,7 +440,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAP87QP52V;
 				INFOPLIST_FILE = "check-list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mancng.check-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +456,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAP87QP52V;
 				INFOPLIST_FILE = "check-list/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mancng.check-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -569,9 +574,10 @@
 		A837185020166D3100673FE9 /* check_list.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A8C44B3E2016A21000EDAA74 /* check_list2.xcdatamodel */,
 				A837185120166D3100673FE9 /* check_list.xcdatamodel */,
 			);
-			currentVersion = A837185120166D3100673FE9 /* check_list.xcdatamodel */;
+			currentVersion = A8C44B3E2016A21000EDAA74 /* check_list2.xcdatamodel */;
 			path = check_list.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -7,7 +7,7 @@
 //
 
 protocol AddViewControllerDelegate: class {
-    func addItem(by contoller: UIViewController, title: String?, descriptions: String?, due_date: Date?, didEdit: Tasks?)
+    func addItem(by contoller: UIViewController, title: String?, descriptions: String?, due_date: Date?, status: Bool?, didEdit: Tasks?)
 }
 
 import UIKit
@@ -17,6 +17,7 @@ class AddViewController: UIViewController {
     var itemTitle: String?
     var itemDescription: String?
     var itemDue_date: Date?
+    var itemStatus: Bool?
     var itemToEdit: Tasks?
     
     weak var delegate: AddViewControllerDelegate?
@@ -34,7 +35,7 @@ class AddViewController: UIViewController {
 
         
         if item.count > 0 && descriptions.count > 0 {
-            delegate?.addItem(by: self, title: item, descriptions: descriptions, due_date: due_date, didEdit: itemToEdit)
+            delegate?.addItem(by: self, title: item, descriptions: descriptions, due_date: due_date, status: false, didEdit: itemToEdit)
             print(due_date)
         }
     }
@@ -43,11 +44,13 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         titleTextField.layer.borderWidth = 1
         descriptionsTextField.layer.borderWidth = 1
+        self.hideKeyboardWhenTappedAround()
         
         if let myItem = itemToEdit {
             titleTextField.text = myItem.title
             descriptionsTextField.text = myItem.descriptions
             datePicker.date = myItem.due_date!
+            itemStatus = false
             addButton.setTitle("Save", for: .normal)
         }
 
@@ -58,5 +61,17 @@ class AddViewController: UIViewController {
     }
 
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 

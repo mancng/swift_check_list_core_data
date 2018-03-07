@@ -34,7 +34,7 @@ class TableViewController: UITableViewController, AddViewControllerDelegate {
     }
 
     // MARK: Delegate
-    func addItem(by contoller: UIViewController, title: String?, descriptions: String?, due_date: Date?, didEdit: Tasks?) {
+    func addItem(by contoller: UIViewController, title: String?, descriptions: String?, due_date: Date?, status: Bool?, didEdit: Tasks?) {
         
         navigationController?.popViewController(animated: true)
         
@@ -89,7 +89,9 @@ class TableViewController: UITableViewController, AddViewControllerDelegate {
         let currentItem = storedData[indexPath.row] as Tasks
         cell.titleLabel.text = String(describing: currentItem.title!)
         cell.descriptionLabel.text = String(describing: currentItem.descriptions!)
-        cell.dateLabel.text = String(describing: currentItem.due_date!)
+        
+        let displayDate = dateConverter(date: currentItem.due_date!)
+        cell.dateLabel.text = String(describing: displayDate)
 
         return cell
     }
@@ -107,6 +109,19 @@ class TableViewController: UITableViewController, AddViewControllerDelegate {
         let itemToEdit = storedData[indexPath.row]
         performSegue(withIdentifier: "EditItemSegue", sender: itemToEdit)
         
+    }
+    
+    func dateConverter(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        
+        let updateFormat = date
+        
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.setLocalizedDateFormatFromTemplate("yyyy-MM-dd")
+        let displayDate = String(dateFormatter.string(from: updateFormat))
+        
+        return displayDate
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
